@@ -1,0 +1,56 @@
+pandas模块是基于numpy模块的一个开源模块，广泛应用与数据快速分析，
+数据清洗和准备等工作，它的名字来源于"panel data“面板数据。
+
+pandas模块提供了非常直观的数据结构及强大的数据管理和处理能力，
+pandas模块可以看成python版的Excel。如果利用Anaconda安装
+Python，则自带Pandas模块。
+
+Pandas更擅长处理二维数据，其主要有Series和DataFrame两种
+数据结构。Series很少单独使用，主要使用DataFrame
+
+3.5.1 Series数据结构：
+Series对象不仅包含数，还包含一组索引。
+演示代码如下：
+import pandas as pd
+s = pd.Series(["A", "B", "C"])
+运行结果：
+0    A
+1    B
+2    C
+dtype: object
+
+3.5.2 二维数据表格DataFrame的创建与索引修改
+DataFrame数据结构：一种二维表格数据结构，可以将其看成一个Excel表格。
+语法：pandas.DataFrame(data=,index=,columns=,dtype=,copy=)
+创建方法1：通过列表创建
+import pandas as pd
+d = pd.DataFrame([[1,2], [3,4], [5,6]])
+print(a)
+运行结果：
+   0  1
+0  1  2
+1  3  4
+2  5  6
+创建方法2：通过字典创建DataFrame
+字典创建DataFrame，默认以字典的键名为列索引
+创建方法3：通过二维数组创建
+2.DataFrame索引的修改
+1）index.name可以修改行索引那一列的名称
+2）rename()函数可以重命名索引名并创建一个新的DataFrame
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

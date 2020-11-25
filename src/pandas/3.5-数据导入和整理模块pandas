@@ -36,8 +36,27 @@ print(a)
 创建方法3：通过二维数组创建
 2.DataFrame索引的修改
 1）index.name可以修改行索引那一列的名称
-2）rename()函数可以重命名索引名并创建一个新的DataFrame
+2）rename()函数可以重命名索引名并创建一个新的DataFrame，inplace参数可以
+   一步到位完成索引的重命名
+3）reset_index()函数将行索引改为普通列
+4) 把常规列改为行索引 set_index()
 
+3.5.2 文件的读取和写入
+pandas模块可以从各种格式文件中读取数据，也可以将处理后的数据写入这些文件中。
+本节以Excel和CSV文件的读取和写入讲解具体方法。
+1.excel文件读取
+read_excel(io,#文件
+           sheet_name=0,#用于指定工作表，也可以是数字（例如0指代第1个工作表)
+           encoding用于指定文件的编码方式，一般认为UTF-8
+           index_col用于设置索引列
+           ,...)
+
+2.csv文件读取
+read_csv(io,#文件
+         delimiter=None,#分隔符
+         encoding=None,#文件编码格式
+         index_col=None,#用于设置索引列
+         )
 
 
 

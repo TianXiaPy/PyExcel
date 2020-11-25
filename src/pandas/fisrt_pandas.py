@@ -40,8 +40,10 @@ B     3      4
 C     5      6
 """
 print("2nd Method to create DataFrame with List")
-d1 = pd.DataFrame([[1, 2], [3, 4], [5, 6]], columns=["Data", "Score"],
-                  index=["A", "B", "C"])
+lst = [[1, 2], [3, 4], [5, 6]]
+clm = ["Data", "Score"]
+ind = ["A", "B", "C"]
+d1 = pd.DataFrame(lst, columns=clm, index=ind)
 print(d1)
 
 """
@@ -98,16 +100,58 @@ a = pd.DataFrame(data=lst, columns=clm, index=indx)
 a.index.name = "公司"
 print(a)
 
+"""
+rename columns and row, with para:inplace=
+"""
+print("rename index and column")
+new_index_dic = {"A": "万科", "B": "阿里", "C": "恒大"}
+new_columns_dic = {"date": "日期", "score": "分数"}
+a.rename(index=new_index_dic, columns=new_columns_dic, inplace=True)
+print(a)
 
+"""
+rename columns and row
+"""
+print("2nd method to rename clolumns and row")
+new_index_dic = {"万科": "阿里", "阿里": "恒大", "恒大": "万科"}
+new_columns_dic = {"date": "日期", "score": "分数"}
+a = a.rename(index=new_index_dic, columns=new_columns_dic)
+print(a)
 
+"""
+set index as normal columns
+"""
+print("set index info as columns")
+a = a.reset_index()
+print(a)
 
+"""
+set columns info as index
+"""
+print("set normal columns as index")
+a = a.set_index("日期") # a.set_index("日期",inplace=True)
+print(a)
 
+"""
+read from excel file and write back
+"""
+print("read data from excel file")
+data = pd.read_excel(r".\data.xlsx", sheet_name=0)
+data.set_index("日期", inplace=True)
+data.to_excel("data.xlsx")
+print(data)
 
+"""
+read data from cvs file and write back
+"""
+print("read data from cvs file")
+data = pd.read_csv(r".\data.csv", delimiter=",")
+data.set_index("q", inplace=True)
+data.to_csv("data.csv")
+print(data)
 
-
-
-
-
-
+"""
+write data into excel
+"""
 
 

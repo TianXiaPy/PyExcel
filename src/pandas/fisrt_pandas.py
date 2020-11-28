@@ -146,12 +146,56 @@ read data from cvs file and write back
 """
 print("read data from cvs file")
 data = pd.read_csv(r".\data.csv", delimiter=",")
+print(data)
 data.set_index("q", inplace=True)
 data.to_csv("data.csv")
 print(data)
 
 """
-write data into excel
+data check
 """
+print("data check")
+data_list = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+co = ["c1", "c2", "c3"]
+ind = ["r1", "r2", "r3"]
+data = pd.DataFrame(data_list, columns=co, index=ind)
+print(data)
+print("pick what data you want, columns")
+print(data[["c1", "c3"]])
+print(data["c2"])
+print("get data through row, rowno start from zero")
+print(data[0:2])
+print(data.iloc[1:2])
+print(data.iloc[-1])
+print("4-th method")
+print(data.loc[["r2", "r3"]])  # 按照行名称选取
+print("5-th method")
+print(data.head(1))  # 选取前3行
+print("块选则")
+print(data[["c1", "c2"]][1:3])
+print("数据筛选")
+print(data[data["c1"] > 1])
+print("数据的排序")
+a = data.sort_values(by="c2", ascending=False)  # 降序排列
+print(a)
+a = a.sort_index()
+print(a)
+print("数据的计算")
+data["c4"] = data["c3"]*data["c1"]
+print(data)
+print("数据的删除")
+a = data.drop(columns="c1")  # 生成新的dataframe，如果inplace设置为true，
+                             # 则直接在原dataFrame中删除
+print(a)
 
-
+"""
+3.5.4 数据表的拼接
+"""
+dct1 = {"公司": ["恒大", "创锐", "快学"], "分数": [90, 85, 93]}
+df1 = pd.DataFrame(dct1)
+print(df1)
+dct2 = {"公司": ["恒大", "创锐", "快学"], "股价": [190, 185, 913]}
+df2 = pd.DataFrame(dct2)
+print(df2)
+df3 = pd.merge(df1, df2, on="公司")  # on指定按哪一列合并
+print(df3)

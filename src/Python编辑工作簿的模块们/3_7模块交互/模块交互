@@ -1,0 +1,21 @@
+3.7 模块的交互
+模块和模块之间是可以交互的，下面学习xlwings模块和
+pandas模块、Matplotlib模块的交互使用方法。
+
+3.7.1 xlwings模块和pandas模块的交互
+例如用pandas模块创建数据表格，再用xlwings将表格写入
+工作簿。
+利用pandas模块生成DataFrame数据表，再利用你xlwings
+将数据写入sheet
+
+3.7.2 xlwings模块和matplotlib模块的交互
+worksheet.pictures.add()可以将plot绘制的图表
+写入工作簿。上述代码中为该函数设置的参数含义解释
+如下：
+figure为固定写法，代表之前用matplotlib模块绘制的图表。
+name用于指定图表名称
+update为true时，后续通过pictures.add()函数调用具有
+相同名称的图标时，可以只更新图标数据，而不更改位置
+left设置图表与左边界的距离，这里left设置为100，表示
+让图标距离左边界100像素，同类可以设置参数top为400,
+表示让图标距离顶部边界400像素。

@@ -145,7 +145,7 @@ print(data)
 read data from cvs file and write back
 """
 print("read data from cvs file")
-data = pd.read_csv(r".\data.csv", delimiter=",")
+data = pd.read_csv(r"data.csv", delimiter=",")
 print(data)
 data.set_index("q", inplace=True)
 data.to_csv("data.csv")

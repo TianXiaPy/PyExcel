@@ -191,6 +191,7 @@ print(a)
 """
 3.5.4 数据表的拼接
 """
+print("DataFrame, Merge")
 dct1 = {"公司": ["恒大", "创锐", "快学"], "分数": [90, 85, 93]}
 df1 = pd.DataFrame(dct1)
 print(df1)
@@ -199,3 +200,18 @@ df2 = pd.DataFrame(dct2)
 print(df2)
 df3 = pd.merge(df1, df2, on="公司")  # on指定按哪一列合并
 print(df3)
+print("DataFrame, Concat")
+lst = [df1, df2]
+df4 = pd.concat(lst, ignore_index=True)
+print(df4)
+df4 = pd.concat(lst, ignore_index=True, axis=1)
+print(df4)
+
+print("DataFrame append")
+df5 = df1.append(df2, ignore_index=True)
+print(df5)
+df6 = df1.append({"公司": "腾飞", "分数": 90}, ignore_index=True)
+print(df6)
+
+
+

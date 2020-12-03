@@ -1,0 +1,7 @@
+3.7 模块的交互
+模块和模块之间是可以交互的，下面学习xlwings模块和
+pandas模块、Matplotlib模块的交互使用方法。
+
+3.7.1 xlwings模块和pandas模块的交互
+例如用pandas模块创建数据表格，再用xlwings将表格写入
+工作簿。

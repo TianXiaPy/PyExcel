@@ -1,0 +1,6 @@
+matplotlib是一个非常出色的数据可视化模块，
+其导入代码通常写成import matplotlib.pyplot as plt
+之后以plt为前缀调用函数即可绘制图表
+    1）plt.plot()函数绘制折线图
+    2）plt.bar()函数绘制柱形图
+    3）plt.pie()函数绘制饼图

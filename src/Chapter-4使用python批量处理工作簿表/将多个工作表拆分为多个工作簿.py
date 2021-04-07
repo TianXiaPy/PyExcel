@@ -21,4 +21,4 @@ for i in workbook.sheets:
     i.api.Copy(Before=sheet_split.api)  # 将来源工作簿中的当前工作表复制到目标工作簿的第一个工作表之前
     workbook_split.save("{}".format(i.name))
     workbook_split.close()
-app.quit
+app.quit()

@@ -21,8 +21,8 @@ for i in file_list:
     print(file_paths)
     workbook = app.books.open(file_paths)
     for j in workbook.sheets:
-        j["A1:H1"].api.Font.Name = "宋体"
         j["A1:H1"].api.Font.Size = "10"
+        j["A1:H1"].api.Font.Name = "宋体"
         j["A1:H1"].api.Font.Bold = True
         for cell in j["A1"].expand("table"):
             for b in range(7, 12):

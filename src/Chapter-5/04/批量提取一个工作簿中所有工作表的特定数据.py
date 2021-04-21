@@ -1,5 +1,5 @@
 """
-Chapter5 example3 批量替换多个工作簿的行数据
+Chapter5 example4 批量提取一个工作簿中特定数据
 Function  :
 Author    : chen yi hao
 CopyRight : TianXiaPy
@@ -20,6 +20,7 @@ worksheet = workbook.sheets
 data = []  # 创建一个空的列表用于存放数据
 for i in worksheet:
     values = i.range("A1").expand().options(pd.DataFrame).value  # 读取工作表数据
+    print(values)
     filtered = values[values["采购物品"] == "复印纸"]  # 提取采购品为复印纸的行数据
     print(filtered)
     if not filtered.empty:  # 判断提取的行是否为空

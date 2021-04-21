@@ -23,8 +23,10 @@ for file in file_list:
     file_paths = os.path.join(file_path, file)
     workbook = app.books.open(file_paths)
     worksheet = workbook.sheets["规格表"]
-    values = worksheet.range("A1").expand().options(pd.DataFrame, header=1,
-                                                    index=False, expand="table").value  # 读取指定工作表中的数据
+    values = worksheet.range("A1").expand().options(pd.DataFrame,
+                                                    header=1,
+                                                    index=False,
+                                                    expand="table").value  # 读取指定工作表中的数据
     new_values = values["规格"].str.split("*", expand=True)  # 根据*拆分规格列
     values["长(mm)"] = new_values[0]  # 将拆分出的第1部分数据添加到标题为长的列中
     values["宽(mm)"] = new_values[1]  # 将拆分出的第2部分数据添加到标题为宽的列中

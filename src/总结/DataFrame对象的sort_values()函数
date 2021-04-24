@@ -1,0 +1,13 @@
+sort_values()函数作为pandas模块中DataFrame对象的函数，用于将
+数据区域按照某个字段的数据进行排序，这个字段可以是行字段，也可以是列字段
+下面对该函数的语法格式和常用参数含义做简单介绍。
+sort_values(by="##", axis=0, ascending=True, inplace=False, na_position="last")
+by: 要排序的列名称或者索引值
+axis: 如果胜率或者为0，或为"index"，则按照参数by指定的
+      列中的数据排序，如果为1，或者为"column", 则按照by指定的索引中的数据
+      排序
+ascending: 排序方式，如果省略或者为True,则升序，如果为False, 则为降序
+inplace: 如果省略或者为False, 则不用排序后的数据替换原来的数据；
+         如果为True,则用排序后的数据替换原来的数据
+na_position: 空值的显示位置，如果为"first"， 表示将空值放在列的首位，
+             如果为"last",则表示将空值放在列的末尾

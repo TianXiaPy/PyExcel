@@ -1,0 +1,4 @@
+reindex(index=**, columns=**, fill_value = 0)
+index: 要改变位置的行，**为列表
+columns: 要改变位置的列，**为列表
+fill_value: 可选参数，

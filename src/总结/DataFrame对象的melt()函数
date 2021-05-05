@@ -1,0 +1,8 @@
+melt()函数时pandas模块中DataFrame对象的函数，用于将列名转换为列数据，
+以供满足后续使用的ols()函数对数据结构的要求。该函数的语法格式和常用参数如下
+melt(id_vars=None,value_vars=None, var_name=None, value_name="value", col_level=None)
+id_vars: 不需要转换的列的列名
+value_vars:  需要转换的列的列名，如果未指明，则除id_vars之外的列都被转换
+var_name: 参数value_vars的值转换后的列名
+value_name: 数值列的列名
+col_level: 可选参数，如果不止一个索引列，则使用该参数

@@ -1,0 +1,11 @@
+hist()函数是Matplotlib模块中的函数，用于绘制直方图。该函数的语法格式和常用
+参数如下：
+hist(x,bins=None,range=None,density=False,
+     color=None,edgecolor=None,linewidth=None)
+x: 指定用于绘制直方图的数据
+bins：如果为整数，表示将数据等分为相应数量的区间，默认值为10；
+     如果为序列，表示用序列的元素作为区间的端点值
+range：指定参与分组统计的数据范围，不在此范围内的数据将被忽略。如果
+     参数bins取值为序列形式，则此参数无效
+density：如果为True,表示绘制频率直方图；如果为False,表示绘制频数直方图
+color/edgecolor/inewidth: 分别用于设置主子的填充颜色，边框颜色，边框粗细

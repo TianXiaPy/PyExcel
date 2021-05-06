@@ -1,0 +1,10 @@
+figure()是matplotlib.pyplot模块中的函数，用于创建一个绘图窗口。
+figure(num=None, figsize=None,dpi=None, facecolor=None, edgecolor=None,
+       frameon=True, clear=False)
+num: 可选，设置窗口名称，默认为None
+figsize: 可选，设置窗口大小，默认为None
+dpi: 可选，设置窗口分辨率，默认为None
+facecolor: 可选，设置窗口的背景颜色
+edgecolor: 可选，用于设置窗口的边框颜色
+frameon: 可选，表示是否绘制窗口的图框，如果为False，则绘制窗口的图框
+clear: 可选，如果为True并且窗口中已经有图形，则清除该窗口中的图形

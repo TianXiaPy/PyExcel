@@ -1,0 +1,4 @@
+1）values = sheet.rang("A1").expand("table")
+    values.column_width = 12  # 将列宽调整为12个字符的宽度
+    values.row_height = 20  # 将行高调整为20个字符的高度
+2) values = sheet.range("A1").expand("table").value  # 获取sheet表格中的值

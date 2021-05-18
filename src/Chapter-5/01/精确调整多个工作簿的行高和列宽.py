@@ -23,7 +23,8 @@ for file in file_list:
     file_paths = os.path.join(file_path, file)  # 将文件夹和文件名拼接成工作簿的完整路径
     workbook = app.books.open(file_paths)  # 打开要调整行高和列宽的工作簿
     for sheet in workbook.sheets:  # 遍历当前工作簿的所有工作表
-        value = sheet.range("A1")  # 在工作表中选则要天正行高和列宽的单元格区域
+        value = sheet.range("A1")  # 在工作表中选则要调整行高和列宽的单元格区域A1
+        print(value)
         value.column_width = 12  # 将列宽调整为12个字符的宽度
         value.row_height = 20  # 将行高调整为20个字符的高度
     workbook.save()  # 保存工作簿

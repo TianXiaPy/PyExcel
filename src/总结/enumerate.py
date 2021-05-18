@@ -20,6 +20,6 @@ sequence : 可遍历的数据对象，可以是列表，元组或者字符串等
 start: 索引的起始位置，如果省略，默认为0
 """
 path_list = ["a", "b"]
+print(type(enumerate(path_list)))
 for index, path in enumerate(path_list):
-    print(type(enumerate(path_list)))
     print(index, path)

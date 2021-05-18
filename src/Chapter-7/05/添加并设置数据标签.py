@@ -20,4 +20,9 @@ zip()函数时python内置的，它以可迭代的对象为参数，将对象中
 zip(iterable,...)
 一个或多个可迭代的对象
 
+text(x,y,s,fontdict=None)
+x:数据标签的x坐标
+y：数据标签的y坐标
+s：数据标签的文本内容
+fontdict: 可选参数，用于设置数据标签的字体，字号，颜色等
 """

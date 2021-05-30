@@ -1,3 +1,11 @@
+"""
+Chapter7 example6  为组合图标添加并设置次坐标轴
+Function  :
+Author    : chen yi hao
+CopyRight : TianXiaPy
+Date      : 2021-05-19
+"""
+
 import matplotlib.pyplot as plt
 import pandas as pd
 

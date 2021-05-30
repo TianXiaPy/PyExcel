@@ -6,26 +6,28 @@ CopyRight : TianXiaPy
 Date      : 2020-11-22
 """
 import numpy as np
+
 # 方式1创建1维度数组
 a = np.array([1, 2])
-print(a)
-
+print("a->", a)
+help(np.arange)
 # 方式2创建1维数组[0 1]
-stop = 2
+stop = 5
 c = np.arange(stop)
-print(c)
+print("c->", c)
 
 # 方式2 创建步长为2，从1开始到10的一维数组
 start = 1
 stop = 10
 step = 2
 d = np.arange(start, stop, step)
-print(d)
+print("d->", d)
 
 # 方式3 创建1维数组正态分布随机数，均值为0，方差为1
+help(np.random.randn)
 n = 2
 e = np.random.randn(n)
-print(e)
+print("e->", e)
 
 # 方式4 创建1维数组
 low = 1
@@ -67,10 +69,6 @@ stop = 8
 step = 1
 m = 2
 n = 2
-k = 2
+k: int = 2
 h = np.arange(start, stop, step).reshape(m, n, k)
 print(h)
-
-
-
-

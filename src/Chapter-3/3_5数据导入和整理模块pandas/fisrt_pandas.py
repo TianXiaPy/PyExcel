@@ -5,8 +5,9 @@ Author    : chen yi hao
 CopyRight : TianXiaPy
 Date      : 2020-11-23
 """
-import pandas as pd
 import numpy as np
+import pandas as pd
+
 """
 create series object with List
 output example:
@@ -129,7 +130,7 @@ print(a)
 set columns info as index
 """
 print("set normal columns as index")
-a = a.set_index("日期") # a.set_index("日期",inplace=True)
+a = a.set_index("日期")  # a.set_index("日期",inplace=True)
 print(a)
 
 """
@@ -181,11 +182,11 @@ print(a)
 a = a.sort_index()
 print(a)
 print("数据的计算")
-data["c4"] = data["c3"]*data["c1"]
+data["c4"] = data["c3"] * data["c1"]
 print(data)
 print("数据的删除")
 a = data.drop(columns="c1")  # 生成新的dataframe，如果inplace设置为true，
-                             # 则直接在原dataFrame中删除
+# 则直接在原dataFrame中删除
 print(a)
 
 """
@@ -212,6 +213,3 @@ df5 = df1.append(df2, ignore_index=True)
 print(df5)
 df6 = df1.append({"公司": "腾飞", "分数": 90}, ignore_index=True)
 print(df6)
-
-
-

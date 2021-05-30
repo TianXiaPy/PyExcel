@@ -18,17 +18,3 @@ plt.show()
 print("绘制饼图")
 plt.pie(lst_x)
 plt.show()
-
-
-
-
-
-
-
-
-
-
-
-
-
-

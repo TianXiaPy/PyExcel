@@ -5,9 +5,9 @@ Author    : chen yi hao
 CopyRight : TianXiaPy
 Date      : 2020-11-29
 """
-import xlwings as xw
-import pandas as pd
 import matplotlib.pyplot as plt
+import pandas as pd
+import xlwings as xw
 
 print("1：xlwings和pandas模块交互")
 app = xw.App(visible=False)
@@ -34,6 +34,3 @@ worksheet.pictures.add(figure, name="积分", update=True, left=100, top=10)
 workbook.save(r".\xw_and_mat.xlsx")
 workbook.close()
 app.quit()
-
-
-
